@@ -23,7 +23,7 @@ def your_api_function():
     def get_gemini_response(question):
         model = genai.GenerativeModel('gemini-pro')
         response = model.generate_content(question)
-        return response.text
+        return response.text.strip('"')
 
     response = get_gemini_response(prompt_value)
     return jsonify(response)
