@@ -26,6 +26,7 @@ def your_api_function():
         return response.text
 
     response = get_gemini_response(prompt_value)
+    response = response.strip('"')
     return jsonify(response)
 
 mode = "prod"
