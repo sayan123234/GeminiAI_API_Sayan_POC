@@ -14,8 +14,8 @@ def your_api_function():
     prompt_value = payload.get('prompt', '')
 
     #api_key =os.environ.get('google_api_key')
-    api_key =load_dotenv()
-    genai.configure(api_key=api_key)
+    load_dotenv()
+    genai.configure(api_key=google_api_key)
 
 
     def get_gemini_response(question):
