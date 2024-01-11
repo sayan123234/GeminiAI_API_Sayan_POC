@@ -1,4 +1,3 @@
-import OS
 import google.generativeai as genai
 from flask import Flask, request, jsonify
 from waitress import serve
