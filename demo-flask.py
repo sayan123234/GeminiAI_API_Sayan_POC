@@ -1,3 +1,4 @@
+from dotenv import load_dotenv
 import google.generativeai as genai
 from flask import Flask, request, jsonify
 from waitress import serve
@@ -12,8 +13,8 @@ def your_api_function():
     # Extract the value for the 'prompt' variable
     prompt_value = payload.get('prompt', '')
 
-    api_key =os.environ.get('google_api_key')
-
+    #api_key =os.environ.get('google_api_key')
+    api_key =load_dotenv()
     genai.configure(api_key=api_key)
 
 
